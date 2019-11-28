@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'java-library'
+apply plugin: 'java'
+
+dependencies {
+
+//    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'org.projectlombok:lombok:1.16.20'
+//    implementation 'com.guicedee.services:javax.transaction:62'
+    implementation group: 'javax.transaction', name: 'javax.transaction-api', version: '1.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.1'
+    implementation 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final'
+
+
+    implementation 'org.springframework:spring-beans:2.2.1.RELEASE'
+//    implementation 'org.springframework.boot:spring-boot-full-build:1.5.22.RELEASE'
+//    implementation 'org.springframework.boot:org.springframework.boot.gradle.plugin:2.2.1.RELEASE'
+    implementation 'org.springframework.cloud:spring-cloud-aws-autoconfigure:2.2.0.RELEASE'
+    implementation 'org.springframework.data:spring-data-rest-parent:3.2.2.RELEASE'
+//    implementation 'org.springframework:spring-full:1.2.8'
+    implementation 'org.springframework:spring-web:4.3.11.RELEASE'
+
+//    implementation 'org.springframework:spring-tx:4.0.0.RC2'
+
+//    implementation 'org.springframework.data:spring-data-jpa:1.1.2.RELEASE'
+
+    implementation 'org.springframework:spring-core:4.1.6'
+
+
+    implementation 'org.springframework.data:spring-data-commons:2.0.9.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-core', version: '4.3.5.RELEASE'
+//    implementation 'org.springframework.boot:spring-boot-starter-test'
+//    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    implementation 'org.slf4j:slf4j-simple:1.7.28'
+
+}
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
