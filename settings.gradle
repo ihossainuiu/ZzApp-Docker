@@ -1,2 +1,2 @@
-include ':spring-boot-postgresql-docker-compose-master'
+include ':zzapp-docker'
 rootProject.name='Rest-Postgres'
